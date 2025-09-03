@@ -1,0 +1,76 @@
+@use "../../styles/variables" as v;
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: v.$color-background;
+  color: v.$color-text-main;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+   .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Brush Script MT', cursive;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0; padding: 0;
+
+    li a {
+      text-decoration: none;
+      color: v.$color-text-sub;       // mặc định
+      transition: color .2s ease;
+
+      /* Thêm dấu # trước mỗi label, không đổi text gốc */
+      &::before {
+        content: "#";
+        margin-right: .25rem;
+        color: v.$color-accent;
+      }
+
+      &:hover { color: v.$color-text-main; }  // hover
+    }
+  }
+
+  /* Cụm EN + Download CV ở bên phải */
+  .controls {
+    display: flex; gap: 1rem; align-items: center;
+
+    .lang,
+    .cv {
+      font-size: 1rem;
+      padding: .4rem .8rem;
+      border: 1px solid v.$color-text-sub;
+      border-radius: 6px;
+      text-decoration: none;
+      color: v.$color-text-main;
+      transition: background-color .2s ease, color .2s ease, border-color .2s;
+    }
+
+    .lang:hover,
+    .cv:hover {
+      color: v.$color-accent;
+      background-color: rgba(199,120,221,.12);
+      border-color: v.$color-text-main;
+    }
+  }
+}
+
+.header .nav a {
+  color: v.$color-text-sub;
+  &:hover { color: v.$color-text-main; }
+
+  &.active {
+    color: v.$color-text-main;
+    text-decoration: none;
+  }
+}
+
+
+
