@@ -15,11 +15,17 @@ export default function Home() {
             <br /> meet creativity
           </p>
 
-          <a href="#contact" className="btn">Contact me !!</a>
+          <a href="#contact" className="btn">
+            Contact me !!
+          </a>
         </div>
 
         <div className="right">
-          <img className="portrait" src="/src/assets/avt.png" alt="NMM portrait" />
+          <img
+            className="portrait"
+            src="public/images/avt.png"
+            alt="NMM portrait"
+          />
 
           <div className="badge">
             <span className="dot" />

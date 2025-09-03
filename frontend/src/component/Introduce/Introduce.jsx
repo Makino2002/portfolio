@@ -43,7 +43,7 @@ export default function Introduce() {
 
           <div className="visual">
             <img
-              src="/src/assets/about-me.png"
+              src="public/images/about-me.png"
               alt="NMM portrait"
               className="photo"
             />
