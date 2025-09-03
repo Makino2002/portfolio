@@ -1,0 +1,106 @@
+@use "../../styles/variables" as v;
+
+.introduce {
+  padding: 4rem 0;
+
+  .intro-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    h2 {
+      margin: 0;
+      font-weight: 700;
+      color: v.$color-text-main;
+
+      &::before {
+        content: "#";
+        margin-right: .25rem;
+        color: v.$color-accent;
+      }
+    }
+
+    .rule {
+      flex: 1 1 auto;
+      height: 2px;
+      background: v.$color-accent;
+      opacity: .6;
+    }
+  }
+
+  .intro-body {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .text {
+    .hello {
+      color: v.$color-text-sub;
+      margin: 0 0 1rem;
+      letter-spacing: .4px;
+    }
+
+    p {
+      color: v.$color-text-sub;
+      line-height: 1.7;
+      margin: 0 0 1rem;
+      max-width: 58ch;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: .5rem;
+      padding: .6rem 1rem;
+      border: 1px solid v.$color-accent;
+      color: v.$color-text-main;
+      text-decoration: none;
+      transition: .2s ease;
+
+      &:hover {
+        background: rgba(199,120,221,.12);
+        border-color: v.$color-text-main;
+      }
+    }
+  }
+
+  .visual {
+    position: relative;
+    justify-self: center;
+
+    .photo {
+      display: block;
+      width: min(380px, 90vw);
+      height: auto;
+      filter: grayscale(100%);
+      border-radius: 6px;
+    }
+
+    .dots {
+      position: absolute;
+      width: 128px; height: 96px;
+      background:
+        radial-gradient(currentColor 2px, transparent 2px) 0 0/16px 16px;
+      color: v.$color-text-sub;
+      opacity: .5;
+
+      &.top { right: 10px; top: -18px; }
+      &.mid { right: -14px; top: 46%; }
+    }
+
+    .rule-bottom {
+      position: absolute;
+      left: 0; right: 0; bottom: -10px;
+      height: 2px;
+      background: v.$color-accent;
+      opacity: .6;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .intro-body { grid-template-columns: 1fr; }
+    .visual { order: -1; margin-bottom: 1rem; }
+  }
+}

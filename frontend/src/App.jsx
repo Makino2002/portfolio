@@ -2,17 +2,21 @@ import React from 'react'
 import Header from './component/header/Header'
 import SocialBar from './component/SocialBar/SocialBar'
 import Footer from './component/footer/Footer'
-// import Footer from './component/footer/footer'
-// import Main from './component/main/main'
+import Home from './component/home/Home.jsx'
+import Container from './component/layout/Container'
+import Introduce from './component/Introduce/Introduce'
 import './App.scss'
-function App() {
 
+function App() {
   return (
     <>
-    <Header />
-    <SocialBar />
-    <Footer />
-
+      <SocialBar />
+      <Container>
+        <Header />
+        <Home />
+        <Introduce />
+        <Footer />
+      </Container>
     </>
   )
 }
