@@ -1,0 +1,4 @@
+nền: #282c33
+text - tên - vị trí: #c778dd
+text - chính: #ffffff
+Text - phụ: #ABB2bf
